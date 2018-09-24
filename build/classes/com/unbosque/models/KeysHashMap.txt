@@ -1,0 +1,9 @@
+Key			Return
+
+P10			Return 10-bit key permuted with P10
+LS1L		Return 5-bit left of first shift (LS-1)
+LS1R		Return 5-bit right of first shift (LS-1)
+K1 			Return key K1 (First P8)
+LS2L		Return 5-bit left of second shift (LS-2)
+LS2R		Return 5-bit right of second shift (LS-2)
+K2 			Return key K2 (Second P8)

@@ -5,9 +5,9 @@ import com.unbosque.models.TablesPermutation;
 /**
  * 
  * @author Juan Pablo Camargo Lasso (juancholasso)
- * @author Samuel Delgado Muñoz
+ * @author Samuel Delgado Muñoz (samudm98)
  * @Reference http://mercury.webster.edu/aleshunas/COSC%205130/G-SDES.pdf
- *
+ * Universidad El Bosque
  */
 /*
  * S-Des Encryption and Decryption
