@@ -56,11 +56,10 @@ public class SDes {
 	
 	//The i-1 is because the array start in 0
 	public String permutation(String key, int[] tablePermutation){
-		int[] P10 = tablePermutation;
 		char[] keyArray = key.toCharArray();
 		String result = "";
-		for(int i = 0; i<P10.length; i++){
-			result+=keyArray[P10[i]-1];
+		for(int i = 0; i<tablePermutation.length; i++){
+			result+=keyArray[tablePermutation[i]-1];
 		}
 		return result;
 	}
