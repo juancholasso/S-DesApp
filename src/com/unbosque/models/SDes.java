@@ -32,6 +32,10 @@ public class SDes {
 		return results;
 	}
 	
+	/**
+	 * Generate K1 and K2 and save the results in HashMap -> results
+	 * Also saves the results of all phases
+	 */
 	public void generateKeys(){
 		//Apply permutation P10
 		String keyP10 = permutation(key,TablesPermutation.P10);
@@ -54,6 +58,9 @@ public class SDes {
 		results.put("K2", k2);
 	}
 	
+	/**
+	 * @return Key Permuted
+	 */
 	//The i-1 is because the array start in 0
 	public String permutation(String key, int[] tablePermutation){
 		char[] keyArray = key.toCharArray();
