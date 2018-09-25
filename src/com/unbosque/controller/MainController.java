@@ -2,7 +2,10 @@ package com.unbosque.controller;
 
 import java.util.HashMap;
 
+import javax.swing.JFileChooser;
+
 import com.unbosque.models.SDes;
+import com.unbosque.views.MainView;
 
 public class MainController {
 	
@@ -17,5 +20,8 @@ public class MainController {
 		System.out.println("ls1L  "+res.get("LS1L"));
 		System.out.println("ls2R  "+res.get("LS2R"));
 		System.out.println("ls2L  "+res.get("LS2L"));
+		MainView view = new MainView();
+		
+		
 	}
 }
