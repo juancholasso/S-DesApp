@@ -5,7 +5,6 @@ import com.unbosque.models.TablesPermutation;
 /**
  * 
  * @author Juan Pablo Camargo Lasso (juancholasso)
- * @author Samuel Delgado Muñoz (samudm98)
  * @Reference http://mercury.webster.edu/aleshunas/COSC%205130/G-SDES.pdf
  * Universidad El Bosque
  */
@@ -26,6 +25,9 @@ public class SDes {
 		this.plaintext = plaintext;
 		this.ciphertext = ciphertext;
 		this.key = key;	
+		results.put("plaintext", plaintext);
+		results.put("ciphertext", ciphertext);
+		results.put("key", key);
 		generateKeys();
 	}
 	
@@ -44,6 +46,8 @@ public class SDes {
 		//Apply LS-1
 		String ls1L = leftShift(keyP10.substring(0,5),1);
 		String ls1R = leftShift(keyP10.substring(5,10),1);
+		results.put("P10/5L", keyP10.substring(0,5));
+		results.put("P10/5R", keyP10.substring(5,10));
 		results.put("LS1L", ls1L);
 		results.put("LS1R", ls1R);
 		//Apply P8 (K1)

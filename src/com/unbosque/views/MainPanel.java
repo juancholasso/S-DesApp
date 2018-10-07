@@ -29,12 +29,18 @@ public class MainPanel extends JPanel {
 		menuBar.add(mnSdes);
 		
 		JMenuItem mntmKeys = new JMenuItem("Keys");
+		mntmKeys.setActionCommand("101");
+		mntmKeys.addActionListener(main);
 		mnSdes.add(mntmKeys);
 		
 		JMenuItem mntmFeistel = new JMenuItem("Feistel");
+		mntmFeistel.setActionCommand("102");
+		mntmFeistel.addActionListener(main);
 		mnSdes.add(mntmFeistel);
 		
 		JMenuItem mntmGeneral = new JMenuItem("General");
+		mntmGeneral.setActionCommand("103");
+		mntmGeneral.addActionListener(main);
 		mnSdes.add(mntmGeneral);
 		
 		JLabel lblLearnSdes = new JLabel("LEARN S-DES");
@@ -55,7 +61,6 @@ public class MainPanel extends JPanel {
 		
 		//ImageIcon imageIcon = new ImageIcon("img/UEBlogo.png"); // load the image to a imageIcon
 		ImageIcon imageIcon = new ImageIcon(new ImageIcon("img/UEBlogo.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
-
 		JLabel label = new JLabel("");
 		label.setIcon(imageIcon);
 		label.setBounds(378, 310, 237, 122);
