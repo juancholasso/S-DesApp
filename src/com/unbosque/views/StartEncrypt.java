@@ -20,8 +20,10 @@ public class StartEncrypt extends JPanel implements ActionListener{
 	private MainView main;
 	private String key;
 	private String plaintext;
+	private JButton button;
 	
 	public static final String S_ENCRYPT = "1";
+	public static final String S_BACK = "2";
 	public static final String S_ENCRYPT_SE = "3";
 	/**
 	 * Create the panel.
@@ -53,6 +55,54 @@ public class StartEncrypt extends JPanel implements ActionListener{
 		mntmGeneral.setActionCommand("103");
 		mntmGeneral.addActionListener(main);
 		mnSdes.add(mntmGeneral);
+
+		JMenu mnPer = new JMenu("Permutation");
+		menuBar.add(mnPer);
+		
+		JMenuItem p10 = new JMenuItem("P10");
+		p10.setActionCommand("201");
+		p10.addActionListener(main);
+		mnPer.add(p10);
+		
+		JMenuItem p8 = new JMenuItem("P8");
+		p8.setActionCommand("202");
+		p8.addActionListener(main);
+		mnPer.add(p8);
+		
+		JMenuItem ip = new JMenuItem("IP");
+		ip.setActionCommand("203");
+		ip.addActionListener(main);
+		mnPer.add(ip);
+		
+		JMenuItem IP_1 = new JMenuItem("Inv IP");
+		IP_1.setActionCommand("204");
+		IP_1.addActionListener(main);
+		mnPer.add(IP_1);
+		
+		JMenuItem E_P = new JMenuItem("E/P");
+		E_P.setActionCommand("205");
+		E_P.addActionListener(main);
+		mnPer.add(E_P);
+		
+		JMenuItem s0 = new JMenuItem("S0");
+		s0.setActionCommand("206");
+		s0.addActionListener(main);
+		mnPer.add(s0);
+		
+		JMenuItem s1 = new JMenuItem("S1");
+		s1.setActionCommand("207");
+		s1.addActionListener(main);
+		mnPer.add(s1);
+		
+		JMenuItem p4 = new JMenuItem("P4");
+		p4.setActionCommand("208");
+		p4.addActionListener(main);
+		mnPer.add(p4);
+
+		JMenuItem LS = new JMenuItem("LS-1");
+		LS.setActionCommand("209");
+		LS.addActionListener(main);
+		mnPer.add(LS);
 		
 		JLabel lblTitle = new JLabel("First, you must insert the key and plaintext");		
 		JPanel panel = new JPanel();
@@ -92,6 +142,12 @@ public class StartEncrypt extends JPanel implements ActionListener{
 		btnEncrypt.addActionListener(this);
 		btnEncrypt.setActionCommand(S_ENCRYPT);
 		add(btnEncrypt);
+		
+		button = new JButton("Back");
+		button.setActionCommand("2");
+		button.addActionListener(this);
+		button.setBounds(40, 463, 117, 25);
+		add(button);
 	}
 
 	public String getKey(){
@@ -127,6 +183,12 @@ public class StartEncrypt extends JPanel implements ActionListener{
 				btnEncrypt.addActionListener(main);
 				btnEncrypt.doClick();
 			}
+		}
+		else if(command.equals(S_BACK)){
+			button.setActionCommand("0");
+			button.removeActionListener(this);
+			button.addActionListener(main);
+			button.doClick();
 		}
 	}
 }

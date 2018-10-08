@@ -25,8 +25,6 @@ public class SDes {
 		this.plaintext = plaintext;
 		this.ciphertext = ciphertext;
 		this.key = key;	
-		results.put("plaintext", plaintext);
-		results.put("ciphertext", ciphertext);
 		results.put("key", key);
 		generateKeys();
 	}
@@ -91,6 +89,7 @@ public class SDes {
 	 * @return
 	 */
 	public void decrypt(){
+		results.put("ciphertext", ciphertext);
 		//Apply IP to ciphertext
 		String IP = permutation(ciphertext, TablesPermutation.IP);
 		results.put("IP", IP);

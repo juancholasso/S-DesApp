@@ -42,19 +42,67 @@ public class MainPanel extends JPanel {
 		mntmGeneral.setActionCommand("103");
 		mntmGeneral.addActionListener(main);
 		mnSdes.add(mntmGeneral);
+
+		JMenu mnPer = new JMenu("Permutation");
+		menuBar.add(mnPer);
+		
+		JMenuItem p10 = new JMenuItem("P10");
+		p10.setActionCommand("201");
+		p10.addActionListener(main);
+		mnPer.add(p10);
+		
+		JMenuItem p8 = new JMenuItem("P8");
+		p8.setActionCommand("202");
+		p8.addActionListener(main);
+		mnPer.add(p8);
+		
+		JMenuItem ip = new JMenuItem("IP");
+		ip.setActionCommand("203");
+		ip.addActionListener(main);
+		mnPer.add(ip);
+		
+		JMenuItem IP_1 = new JMenuItem("Inv IP");
+		IP_1.setActionCommand("204");
+		IP_1.addActionListener(main);
+		mnPer.add(IP_1);
+		
+		JMenuItem E_P = new JMenuItem("E/P");
+		E_P.setActionCommand("205");
+		E_P.addActionListener(main);
+		mnPer.add(E_P);
+		
+		JMenuItem s0 = new JMenuItem("S0");
+		s0.setActionCommand("206");
+		s0.addActionListener(main);
+		mnPer.add(s0);
+		
+		JMenuItem s1 = new JMenuItem("S1");
+		s1.setActionCommand("207");
+		s1.addActionListener(main);
+		mnPer.add(s1);
+		
+		JMenuItem p4 = new JMenuItem("P4");
+		p4.setActionCommand("208");
+		p4.addActionListener(main);
+		mnPer.add(p4);
+		
+		JMenuItem LS = new JMenuItem("LS-1");
+		LS.setActionCommand("209");
+		LS.addActionListener(main);
+		mnPer.add(LS);
 		
 		JLabel lblLearnSdes = new JLabel("LEARN S-DES");
-		lblLearnSdes.setBounds(378, 64, 111, 15);
+		lblLearnSdes.setBounds(412, 67, 111, 15);
 		add(lblLearnSdes);
 		
 		JButton btnStartEncrypt = new JButton("Start Decrypt");
-		btnStartEncrypt.setBounds(502, 229, 160, 25);
+		btnStartEncrypt.setBounds(540, 229, 160, 25);
 		btnStartEncrypt.setActionCommand(MainView.S_DECRYPT);
 		btnStartEncrypt.addActionListener(main);
 		add(btnStartEncrypt);
 		
 		JButton btnStartDecrypt = new JButton("Start Encrypt");
-		btnStartDecrypt.setBounds(199, 229, 160, 25);
+		btnStartDecrypt.setBounds(232, 229, 160, 25);
 		btnStartDecrypt.setActionCommand(MainView.S_ENCRYPT);
 		btnStartDecrypt.addActionListener(main);
 		add(btnStartDecrypt);
@@ -63,7 +111,7 @@ public class MainPanel extends JPanel {
 		ImageIcon imageIcon = new ImageIcon(new ImageIcon("img/UEBlogo.png").getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT));
 		JLabel label = new JLabel("");
 		label.setIcon(imageIcon);
-		label.setBounds(378, 310, 237, 122);
+		label.setBounds(412, 336, 237, 122);
 		add(label);
 		
 		JLabel lblSemilleroSeguridadInformatica = new JLabel("Semillero Seguridad Informatica - Unbosque 2018");
